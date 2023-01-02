@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 const Header = () => {
   return (
     <Wrapper>
@@ -15,7 +16,7 @@ const Header = () => {
             <NavItemLine2>Shop</NavItemLine2>
           </NavItem>
           <NavItem>
-            <NavItemLine1>Cart</NavItemLine1>
+            <ShoppingBasketIcon fontSize="large" />
             <NavItemLine2>0</NavItemLine2>
           </NavItem>
         </NavList>
