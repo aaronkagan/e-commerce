@@ -10,9 +10,8 @@ const Header = () => {
         <LogoTitle>E Commerce</LogoTitle>
       </Logo>
       <SearchBar>
-        <SearchInput>
-          <SearchIcon />
-        </SearchInput>
+        <SearchInput />
+        <SearchIcon />
       </SearchBar>
       <Nav>
         <NavList>
