@@ -37,6 +37,7 @@ const Wrapper = styled.div`
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #131921;
   position: sticky;
   top: 0;
@@ -47,7 +48,7 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   margin: 0 25px;
-  gap: 5px;
+  gap: 10px;
   color: #ff9f00;
 `;
 
@@ -57,6 +58,8 @@ const LogoTitle = styled.h2`
 
 const SearchBar = styled.div`
   display: flex;
+  // Note:
+  flex: 1;
   align-items: center;
 `;
 
@@ -70,20 +73,25 @@ const SearchInput = styled.input`
 
 const StyledSearchIcon = styled(SearchIcon)`
   padding: 5px;
+  // Note:
   height: 22px !important;
   background-color: #ff9f00;
 `;
 
-const Nav = styled.nav`
+const Nav = styled.nav``;
+
+const NavList = styled.ul`
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+`;
+
+const NavItem = styled.li`
   display: flex;
   flex-direction: column;
   color: white;
-  margin: 0 10px;
+  gap: 2px;
 `;
-
-const NavList = styled.ul``;
-
-const NavItem = styled.li``;
 
 const NavItemLine1 = styled.span`
   font-size: 10px;
@@ -91,14 +99,14 @@ const NavItemLine1 = styled.span`
 
 const NavItemLine2 = styled.span`
   font-size: 13px;
-  font-weight: 800;
+  font-weight: bold;
 `;
 
 const NavItemCart = styled.div`
   display: flex;
   align-items: center;
   color: white;
-  margin-right: 0 50px 0 10px;
+  margin: 0 20px 0 10px;
 `;
 
 const StyledShoppingBasketIcon = styled(ShoppingBasketIcon)``;
