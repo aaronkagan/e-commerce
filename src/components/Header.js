@@ -58,8 +58,8 @@ const LogoTitle = styled.h2`
 
 const SearchBar = styled.div`
   display: flex;
-  // Note:
-  flex: 1;
+  // Note: Allows Search bar to grow to fill the space
+  flex-grow: 1;
   align-items: center;
 `;
 
@@ -73,7 +73,7 @@ const SearchInput = styled.input`
 
 const StyledSearchIcon = styled(SearchIcon)`
   padding: 5px;
-  // Note:
+  // Note: Guarantees height of icon
   height: 22px !important;
   background-color: #ff9f00;
 `;
