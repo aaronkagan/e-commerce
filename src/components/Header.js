@@ -11,7 +11,7 @@ const Header = () => {
       </Logo>
       <SearchBar>
         <SearchInput />
-        <SearchIcon />
+        <StyledSearchIcon />
       </SearchBar>
       <Nav>
         <NavList>
@@ -23,34 +23,88 @@ const Header = () => {
             <NavItemLine1>Your</NavItemLine1>
             <NavItemLine2>Shop</NavItemLine2>
           </NavItem>
-          <NavItem>
-            <ShoppingBasketIcon />
-            <NavItemLine2>0</NavItemLine2>
-          </NavItem>
+          <NavItemCart>
+            <StyledShoppingBasketIcon />
+            <CartCount>0</CartCount>
+          </NavItemCart>
         </NavList>
       </Nav>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+`;
 
-const Logo = styled.div``;
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 25px;
+  gap: 5px;
+  color: #ff9f00;
+`;
 
-const LogoTitle = styled.h2``;
+const LogoTitle = styled.h2`
+  color: white;
+`;
 
-const SearchBar = styled.div``;
+const SearchBar = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-const SearchInput = styled.input``;
+const SearchInput = styled.input`
+  height: 12px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+`;
 
-const Nav = styled.nav``;
+const StyledSearchIcon = styled(SearchIcon)`
+  padding: 5px;
+  height: 22px !important;
+  background-color: #ff9f00;
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 0 10px;
+`;
 
 const NavList = styled.ul``;
 
 const NavItem = styled.li``;
 
-const NavItemLine1 = styled.span``;
+const NavItemLine1 = styled.span`
+  font-size: 10px;
+`;
 
-const NavItemLine2 = styled.span``;
+const NavItemLine2 = styled.span`
+  font-size: 13px;
+  font-weight: 800;
+`;
+
+const NavItemCart = styled.div`
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 0 50px 0 10px;
+`;
+
+const StyledShoppingBasketIcon = styled(ShoppingBasketIcon)``;
+
+const CartCount = styled.span`
+  margin: 0 10px;
+`;
 
 export default Header;
