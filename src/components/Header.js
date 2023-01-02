@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import StorefrontIcon from '@mui/icons-material/Storefront';
 const Header = () => {
   return (
     <Wrapper>
-      <Logo></Logo>
+      <Logo>
+        <StorefrontIcon />
+      </Logo>
       <SearchBar></SearchBar>
       <Nav>
         <NavList>
