@@ -6,7 +6,7 @@ const Homepage = () => {
   const [products, setProducts] = useState([{}]);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
+    fetch('https://fakestoreapi.com/products?limit=7')
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
