@@ -23,6 +23,9 @@ const Wrapper = styled.div`
   max-height: 400px;
   min-width: 100px;
   background-color: white;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 const Rating = styled.div`

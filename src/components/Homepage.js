@@ -90,18 +90,29 @@ const Row1 = styled.div`
   display: flex;
   gap: 20px;
   width: 95%;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Row2 = styled.div`
   display: flex;
   gap: 20px;
   width: 95%;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const Row3 = styled.div`
   display: flex;
   gap: 20px;
   width: 95%;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const Loading = styled.h3`
