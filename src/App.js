@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Homepage from './components/Homepage';
 import GlobalStyle from './globalStyles';
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div>
       <GlobalStyle />
       <Header />
+      <Homepage />
     </div>
   );
 };
