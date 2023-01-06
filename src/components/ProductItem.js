@@ -4,8 +4,8 @@ const ProductItem = ({ item, row }) => {
   return (
     item && (
       <Wrapper row={row}>
-        <p>{item.title}</p>
-        <p>${item.price}</p>
+        <Title>{item.title}</Title>
+        <Price>${item.price}</Price>
         <Rating>⭐️⭐️</Rating>
         <Img src={item.image} />
         <Button>Add Item</Button>
@@ -17,7 +17,8 @@ const ProductItem = ({ item, row }) => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   width: 100%;
   max-height: 400px;
@@ -31,6 +32,10 @@ const Wrapper = styled.div`
 const Rating = styled.div`
   display: flex;
 `;
+
+const Title = styled.p``;
+
+const Price = styled.p``;
 
 const Img = styled.img`
   max-height: 200px;
