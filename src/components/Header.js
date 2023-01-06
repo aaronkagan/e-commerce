@@ -2,13 +2,17 @@ import styled from 'styled-components';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <Wrapper>
       <Logo>
-        <StorefrontIcon fontSize="large" />
+        <StyledLink to="/">
+          <StorefrontIcon fontSize="large" />
+        </StyledLink>
         <LogoTitle>E Commerce</LogoTitle>
       </Logo>
+
       <SearchBar>
         <SearchInput />
         <StyledSearchIcon />
@@ -24,7 +28,10 @@ const Header = () => {
             <NavItemLine2>Shop</NavItemLine2>
           </NavItem>
           <NavItemCart>
-            <StyledShoppingBasketIcon />
+            <CartLink to="/cart">
+              <StyledShoppingBasketIcon />
+            </CartLink>
+
             <CartCount>0</CartCount>
           </NavItemCart>
         </NavList>
@@ -76,6 +83,14 @@ const StyledSearchIcon = styled(SearchIcon)`
   // Note: Guarantees height of icon
   height: 22px !important;
   background-color: #ff9f00;
+`;
+
+const StyledLink = styled(Link)`
+  color: #ff9f00;
+`;
+
+const CartLink = styled(Link)`
+  color: white;
 `;
 
 const Nav = styled.nav``;

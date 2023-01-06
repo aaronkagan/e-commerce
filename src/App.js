@@ -7,8 +7,8 @@ const App = () => {
   return (
     <div>
       <GlobalStyle />
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route
             path="/cart"
