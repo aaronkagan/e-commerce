@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <Wrapper>
-      <Logo>
-        <StyledLink to="/">
+      <StyledLink to="/">
+        <Logo>
           <StorefrontIcon fontSize="large" />
-        </StyledLink>
-        <LogoTitle>E Commerce</LogoTitle>
-      </Logo>
+          <LogoTitle>E Commerce</LogoTitle>
+        </Logo>
+      </StyledLink>
 
       <SearchBar>
         <SearchInput />
@@ -27,13 +27,13 @@ const Header = () => {
             <NavItemLine1>Your</NavItemLine1>
             <NavItemLine2>Shop</NavItemLine2>
           </NavItem>
-          <NavItemCart>
-            <CartLink to="/cart">
+          <CartLink to="/cart">
+            <NavItemCart>
               <StyledShoppingBasketIcon />
-            </CartLink>
 
-            <CartCount>0</CartCount>
-          </NavItemCart>
+              <CartCount>0</CartCount>
+            </NavItemCart>
+          </CartLink>
         </NavList>
       </Nav>
     </Wrapper>
@@ -87,10 +87,12 @@ const StyledSearchIcon = styled(SearchIcon)`
 
 const StyledLink = styled(Link)`
   color: #ff9f00;
+  text-decoration: none;
 `;
 
 const CartLink = styled(Link)`
   color: white;
+  text-decoration: none;
 `;
 
 const Nav = styled.nav``;
