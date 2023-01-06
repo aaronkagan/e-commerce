@@ -4,7 +4,8 @@
 
 Features:
 
-- Search Bar
+- Search Bar (in progress)
+- Pagination
 
 Technologies:
 
