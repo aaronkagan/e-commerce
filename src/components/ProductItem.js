@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 const ProductItem = ({ item, row }) => {
   return (
-    <Wrapper row={row}>
-      <p>{item.title}</p>
-      <p>${item.price}</p>
-      <Rating>⭐️⭐️</Rating>
-      <Img src={item.image} />
-      <Button>Add Item</Button>
-    </Wrapper>
+    item && (
+      <Wrapper row={row}>
+        <p>{item.title}</p>
+        <p>${item.price}</p>
+        <Rating>⭐️⭐️</Rating>
+        <Img src={item.image} />
+        <Button>Add Item</Button>
+      </Wrapper>
+    )
   );
 };
 
