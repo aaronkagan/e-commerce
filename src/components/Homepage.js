@@ -133,6 +133,7 @@ const Row3 = styled.div`
 
 const Loading = styled.h3`
   height: 100vh;
+  color: white;
 `;
 
 export default Homepage;
