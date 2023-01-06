@@ -57,7 +57,7 @@ const ProductsArea = styled.div`
 `;
 
 const PayArea = styled.div`
-  background: #e6e7ff;
+  background: #f1f1f1;
   width: 30%;
   padding: 1.5%;
 `;
