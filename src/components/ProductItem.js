@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   align-items: flex-start;
   padding: 20px;
   width: ${(props) => {
-    return props.row % 2 === 0 ? '33.3%' : '50%';
+    return props.row % 2 === 0 ? '33.3%' : '100%';
   }};
   max-height: 400px;
   min-width: 100px;
