@@ -31,6 +31,7 @@ const Homepage = () => {
         src={banner}
         alt="banner"
       />
+
       <ProductsContainer>
         {currentItems.length > 0 ? (
           <>
@@ -99,7 +100,7 @@ const ProductsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding-bottom: 3vh;
+  padding-bottom: 1.5vh;
 `;
 
 const Row1 = styled.div`

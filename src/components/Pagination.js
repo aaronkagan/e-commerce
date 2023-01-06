@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
   const pageNumbers = [];
 
@@ -6,21 +8,39 @@ const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
   }
 
   return (
-    <nav>
-      <ul>
+    <Nav>
+      <Ul>
         {pageNumbers.map((number) => (
-          <li key={number}>
+          <Li key={number}>
             <a
               onClick={() => paginate(number)}
-              href="!#"
+              href="#!"
             >
               {number}
             </a>
-          </li>
+          </Li>
         ))}
-      </ul>
-    </nav>
+      </Ul>
+    </Nav>
   );
 };
+
+const Nav = styled.nav`
+  padding-bottom: 3vh;
+`;
+
+const Ul = styled.ul`
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+`;
+
+const Li = styled.li`
+  a {
+    border: 1px solid white;
+    padding: 10px 15px;
+    text-decoration: none;
+  }
+`;
 
 export default Pagination;
