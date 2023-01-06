@@ -19,9 +19,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 20px;
-  width: ${(props) => {
+  /* width: ${(props) => {
     return props.row % 2 === 0 ? '33.3%' : '100%';
-  }};
+  }}; */
+  width: 100%;
   max-height: 400px;
   min-width: 100px;
   background-color: white;
