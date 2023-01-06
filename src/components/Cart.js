@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import banner from '../assets/images/cart-banner.png';
+import CartProduct from './CartProduct';
 
 const Cart = () => {
   return (
@@ -11,7 +12,11 @@ const Cart = () => {
         />
         <Title>Your Cart</Title>
       </Basket>
-      <ProductsArea></ProductsArea>
+      <ProductsArea>
+        <CartProduct />
+        <CartProduct />
+        <CartProduct />
+      </ProductsArea>
       <PayArea></PayArea>
     </Wrapper>
   );
@@ -31,7 +36,11 @@ const Banner = styled.img`
 
 const Title = styled.h2``;
 
-const ProductsArea = styled.div``;
+const ProductsArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
 
 const PayArea = styled.div``;
 
