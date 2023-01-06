@@ -4,15 +4,26 @@ import styled from 'styled-components';
 import banner from '../assets/images/banner.jpeg';
 import ProductItem from './ProductItem';
 
+import Pagination from './Pagination';
+
 const Homepage = () => {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=7')
+    fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
   }, []);
+
+  // For Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(7);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = products.slice(indexOfFirstItem, indexOfLastItem);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <Wrapper>
@@ -21,40 +32,40 @@ const Homepage = () => {
         alt="banner"
       />
       <ProductsContainer>
-        {products.length > 0 ? (
+        {currentItems.length > 0 ? (
           <>
             <Row1>
               <ProductItem
                 row={1}
-                item={products[0]}
+                item={currentItems[0]}
               />
               <ProductItem
                 row={1}
-                item={products[1]}
+                item={currentItems[1]}
               />
             </Row1>
             <Row2>
               <ProductItem
                 row={2}
-                item={products[2]}
+                item={currentItems[2]}
               />
               <ProductItem
                 row={2}
-                item={products[3]}
+                item={currentItems[3]}
               />
               <ProductItem
                 row={2}
-                item={products[4]}
+                item={currentItems[4]}
               />
             </Row2>
             <Row3>
               <ProductItem
                 row={3}
-                item={products[5]}
+                item={currentItems[5]}
               />
               <ProductItem
                 row={3}
-                item={products[6]}
+                item={currentItems[6]}
               />
             </Row3>
           </>
@@ -62,6 +73,11 @@ const Homepage = () => {
           <Loading>Loading</Loading>
         )}
       </ProductsContainer>
+      <Pagination
+        itemsPerPage={itemsPerPage}
+        totalItems={products.length}
+        paginate={paginate}
+      />
     </Wrapper>
   );
 };
