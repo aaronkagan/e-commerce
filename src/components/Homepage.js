@@ -1,4 +1,3 @@
-import { width } from '@mui/system';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import banner from '../assets/images/banner.jpeg';
@@ -17,7 +16,7 @@ const Homepage = () => {
 
   // For Pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(7);
+  const itemsPerPage = 7;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = products.slice(indexOfFirstItem, indexOfLastItem);
