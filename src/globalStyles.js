@@ -10,6 +10,16 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
+
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
 `;
 
 export default GlobalStyle;
